@@ -1,0 +1,421 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - joke
+  - tell_name
+  - play_video
+  - out_of_scope
+  - approval_process
+  - login
+  - faculty
+  - payment
+  - change_details
+  - family
+  - positive
+  - negative
+  - password
+  - username
+  - update_faculty
+  - delete_faculty
+  - submenu_login
+  - submenu_faculty
+  - payment_failure
+  - payment_queries
+  - submenu_payment
+  - submenu_approval
+  - approval_process_queries
+  - approval_process_info
+  - details_change
+  - details_mandatory
+  - mainmenu_about
+  - mainmenu_issues
+  - mainmenu_features
+  - mainmenu_links
+  - need
+  - member
+  - sih
+  - courses
+  - menu
+  - engg
+  - location
+  - contest
+  - swayam
+  - college
+  - contd
+  - service
+  - feedback
+
+
+responses:
+  utter_mainmenu:
+    - text: "How may I help you?"
+      buttons:
+       - title: "General Information"
+         payload: "/mainmenu_about"
+       - title: "Issues"
+         payload: "/menu"
+       - title: "Explore more"
+         payload: "/mainmenu_features"
+       - title: "Direct links"
+         payload: "/mainmenu_links"
+  utter_mainmenu_about:
+    - text: "Know more about<b> AICTE </b> from the following"
+      buttons:
+        - title: "About"
+          payload: "/need"
+        - title: "Become a member"
+          payload: "/member"
+        - title: "Education"
+          payload: "/engg"
+        - title: "Location"
+          payload: "/location"
+        - title: "Colleges"
+          payload: "/college"
+  utter_mainmenu_features:
+    - text: "Hope these might help you out"
+      buttons:
+        - title: "SIH"
+          payload: "/sih"
+        - title: "Free courses / Internships "
+          payload: "/courses"
+        - title: "Contest"
+          payload: "/contest"
+        - title: "Swayam"
+          payload: "/swayam"
+
+  utter_menu:
+    - text: "Hey,Choose your <b> domain </b> of query"
+      buttons:
+        - title: "Login issues"
+          payload: "/submenu_login"
+        - title: "Payment"
+          payload: "/submenu_payment"
+        - title: " Faculty Details"
+          payload: "/submenu_faculty"
+        - title: " Approval Process"
+          payload: "/submenu_approval"
+        - title: " Application Form"
+          payload: "/submenu_details"
+#        - title: "Common Queries"
+#          payload: "/submenu_common"
+
+  utter_submenu_login:
+    - text: "Anything from the below?"
+      buttons:
+        - title: "Password "
+          payload: "/password"
+        - title: "Username "
+          payload: "/username"
+  utter_submenu_faculty:
+    - text: " How could we help you?"
+      buttons:
+        - title: " Update Faculty Details"
+          payload: "/update_faculty"
+        - title: " Delete Faculty Details"
+          payload: "/delete_faculty"
+  utter_submenu_payment:
+    - text: "Anything as below?"
+      buttons:
+        - title: " Payment Failure"
+          payload: "/payment_failure"
+        - title: " Payment Queries"
+          payload: "/payment_queries"
+
+  utter_submenu_approval:
+    - text: "How could we help you?"
+      buttons:
+        - title: "Approval Process Info "
+          payload: "/approval_process_info"
+        - title: "Approval Process Queries"
+          payload: "/approval_process_queries"
+  utter_submenu_details:
+    - text: "What would you like to know?"
+      buttons:
+        - title: "Mandatory Details"
+          payload: "/details_mandatory"
+        - title: "Change of Details"
+          payload: "/details_change"
+
+  utter_mainmenu_links:
+    - text: "<b>1. User Manual</b> : <a href='https://www.aicte-india.org/downloads/AICTE_Help_Manual.pdf'>https://www.aicte-india.org/downloads/AICTE_Help_Manual.pdf</a> \n
+             2.<b> Login</b> : <a href='https://rb.gy/rblwhe'>https://rb.gy/rblwhe</a> \n
+             3.<b> Smart India Hackathon</b>: <a href='https://rb.gy/tdg2f3'>https://rb.gy/rblwhe'>https://rb.gy/rblwhe</a> \n
+             4<b> Free courses</b>: <a href='https://free.aicte-india.org'>https://free.aicte-india.org/</a> \n
+             5.<b> Startup</b> : <a href='https://rb.gy/a1zgev'>https://rb.gy/a1zgev</a> \n
+             6. <b>Centralised support system<b>: <a href='https://css.aicte-india.org/login'>https://css.aicte-india.org/login</a> \n
+             7.<b> Swayam</b>: <a href='https://swayam.gov.in'>'https://swayam.gov.in/</a> "
+
+  utter_service:
+    - text: " Are you satisfied with the service?"
+      buttons:
+        - title: "👏"
+          payload: "/good_service"
+        - title: "👍"
+          payload: "/ok_service"
+        - title: "👎"
+          payload: "/bad_service"
+#  utter_submenu_details:
+#    - text: "How could we help you?"
+#      buttons:
+#        - title: "
+#      custom:
+#        payload: dropDown
+#        data:
+#          - label: login issues
+#            value: "/inform{'slot_name':'Login issues'}"
+#  utter_chitchat/ask_login:
+#    - text: "Please <b> sign up </b> using this [link](<a href='http://portal.aicteindia.org/partnerportal_enu'>link</a>) or
+#             refer to the <b> user manual </b> by clicking this [link](<a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>link</a>) for Report Generation or more details . \n
+#         <b>NOTE</b>: In case of forgot password, permanent InstituteId or applicationId is sufficient for logging in,kindly check institute's registered emailID (Spam folder) for further steps "
+#    - text: "Kindly <b> sign up </b> using this [clickable link](<a href='http://portal.aicteindia.org/partnerportal_enu'>link</a> or <b> user manual </b> by clicking <a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>link</a>) for Report Generation or more details.\n
+#             For forgot password: permanent InstituteId or applicationId is sufficient for logging in. (Check spam folder) "
+
+  utter_login:
+
+    - text: "Please <font color = 'red' >Sign Up </font color> using <a href='http://portal.aicteindia.org/partnerportal_enu'>http://portal.aicteindia.org/partnerportal_enu</a>or
+                 refer to the <b> user manual </b> by  <a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>https://aicte-india.org/bureaus/approval/ap_2020-21</a> for Report Generation or more details.\n
+              <b>   NOTE</b>: \n
+                 1. In case of forgot password, permanent InstituteId or applicationId is sufficient. \n
+                 2. Kindly check institute's registered emailID (Spam folder) for further steps"
+
+      image: "<a href='url'>https://i.postimg.cc/Gm0p73P2/Whats-App-Image-2022-03-05-at-10-48-45-AM.jpg'>link</a> \n
+               <b>  NOTE</b> For larger view, right click and open img in new tab"
+
+
+    - text: "Kindly <font color = 'red' >sign up </font color> using <a href='http://portal.aicteindia.org/partnerportal_enu'>http://portal.aicteindia.org/partnerportal_enu</a> or refer to the <b> user manual </b> by <a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>https://aicte-india.org/bureaus/approval/ap_2020-21</a> for Report Generation or more details.\n
+                 For forgot password: permanent InstituteId or applicationId is sufficient for logging in. (Check spam folder) "
+      image: "https://i.postimg.cc/Gm0p73P2/Whats-App-Image-2022-03-05-at-10-48-45-AM.jpg"
+
+
+  utter_password:
+    - text: " In case of  forgot password , refer <b> user manual </b> <a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>https://aicte-india.org/bureaus/approval/ap_2020-21</a>.\n
+            <b>  NOTE</b>: For forgot password, permanent InstituteId or applicationId is sufficient. Also kindly check institute's registered email ID (Spam folder) for further steps \n
+              For larger view, right click and open img in new tab"
+      image:  "https://i.postimg.cc/SsjsNTkJ/Whats-App-Image-2022-03-05-at-1-26-18-PM.jpg"
+  utter_username:
+    - text: " <b>Sign up</b> using <a href='http://portal.aicteindia.org/partnerportal_enu'>http://portal.aicteindia.org/partnerportal_enu</a> or
+              refer to the <b>user manual:</b> <a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>https://aicte-india.org/bureaus/approval/ap_2020-21</a> "
+      image: "https://i.postimg.cc/SsjsNTkJ/Whats-App-Image-2022-03-05-at-1-26-18-PM.jpg"
+  utter_update_faculty:
+    - text: "Follow the <b>user manual </b> <a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>https://aicte-india.org/bureaus/approval/ap_2020-21</a>) for uploading faculty details"
+      image:  "https://i.postimg.cc/7LmxJpVq/Whats-App-Image-2022-03-05-at-1-52-33-PM.jpg"
+
+
+  utter_delete_faculty:
+    - text: " For <b>faculty deletion</b>, go to 'HOI & Faculty' tab and mark them duplicate or 'Left the Institute'. \n
+             <b> NOTE</b>: Aadhar and Pan details are mandatory for the above updation. \n
+              For more details refer <a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>https://aicte-india.org/bureaus/approval/ap_2020-21</a>]"
+
+
+#  utter_chitchat/ask_aicte:
+#    - text: "<b>All India Council for Technical Education (AICTE)</b> was set up in <b>November 1945</b> as a national-level Apex Advisory Body to conduct a survey on the facilities available for technical education and to promote development in the country in a coordinated and integrated manner."
+  utter_greet:
+    - text: "Hey hi, Greeting of the day"
+    - text: "Hello, welcome to AICTE "
+    - text: "Namasthe, Welcome to AICTE"
+  utter_cheer_up:
+    - text: "Here is something to cheer you up:"
+  utter_did_that_help:
+    - text: "Did that help you?"
+  utter_happy:
+    - text: "Great, carry on!"
+  utter_goodbye:
+    - text: "Thank you,bye \n
+            Hope your queries are met, if not <b>contact us</b> using:  <a href='https://bit.ly/3vGkCni'>https://bit.ly/3vGkCni</a>"
+    - text: "Indeed our pleasure helping you \n
+            Hope your queries are met if not <b>contact us</b> using:  <a href='https://bit.ly/3vGkCni!'>https://bit.ly/3vGkCni!</a>"
+    - text: "Bye,have a great day !!\n
+            Hope your queries are met if not contact us using:  <a href='https://bit.ly/3vGkCni'>https://bit.ly/3vGkCni</a>"
+    - text: "Our pleasure assiting you \n
+            Hope your queries are met if not <b>contact us</b> using:  <a href='https://bit.ly/3vGkCni!'>https://bit.ly/3vGkCni!</a>"
+  utter_name:
+    - text: I am an AI powered A.I.C.T.E bot !!
+#      buttons:
+#        - title: "button1"
+#          payload: "/positive"
+#        - title: "button2"
+#          payload: "/negative"
+  utter_out_of_scope:
+    - text: Hey, I am unable to catch your statements right. Kindly rephrase !!
+  utter_family:
+    - text: Hey, I am an AI powered A.I.C.T.E bot, I am just 3 months old.
+  utter_positive:
+    - text: Hey, nice to hear that from you. I too am.
+  utter_negative:
+    - text: Hey,thats seems offensive.
+  utter_joke:
+    - text: "How do robots eat? , Answer: Haha !! with computer chips :)"
+    - text: "What do you call a sleeping bull? , Answer: Bull-dozer"
+    - text: "B never sweats, because its between AC  ( A B C.. )"
+  utter_payment:
+    - text: "The update takes approx 48-72 hrs, if not, Click on <b>'View Transaction' -> Payment tab</b> to view status. \n
+            <b> NOTE</b>: Pop ups are to be enabled for the website \n
+             For more queries,<b> Raise a Grievance</b> at <a href='https://www.facilities.aicteindia.org/ApprovalProcess/apformEmail.php'>https://www.facilities.aicteindia.org/ApprovalProcess/apformEmail.php</a>)"
+    - text: "Online payment takes approx 48-72 hrs to update under the<b> 'View Transaction' </b>(In Payment tab). \n
+         <b>    NOTE</b>:  Pop ups are to be enabled for the website. For more details, Raise a Grievance at <a href='https://www.facilities.aicteindia.org/ApprovalProcess/apformEmail.php'>https://www.facilities.aicteindia.org/ApprovalProcess/apformEmail.php</a>)"
+#  utter_chitchat/ask_payment:
+
+#    - text: "The update takes approx 48-72 hrs, if not, Click on<b>'View Transaction' </b>under Payment tab for the status. \n
+#            <b> NOTE</b>: Make sure, pop ups are enabled for AICTE website through browser. \n
+#             For more queries, <b>Raise a Grievance via grievance</b> form available at this [clickable link](<a href='https://www.facilities.aicteindia.org/ApprovalProcess/apformEmail.php'>link</a>)"
+#    - text: "Online payment takes approx 48-72 hrs to update under the<b> 'View Transaction'</b> (In Payment tab).\n
+#            <b> NOTE:</b> Make sure pop ups are allowed for the website. For more details,Raise a Grievance via grievance form available at this [clickable link](<a href='https://www.facilities.aicteindia.org/ApprovalProcess/apformEmail.php'>link</a>)"
+#  utter_chitchat/ask_approval_process:
+#     - text: "<b>Login</b> to your AICTE web portal, and follow the path: [<a href='https://aicteindia.org/bureaus/approval/ap_2020-21'>link</a>](<a href='https://aicteindia.org/bureaus/approval/ap_2020-21'>link</a>)\n
+#            <b>  NOTE</b>: For more details refer the user manual:   <a href='https://aicteindia.org/bureaus/approval/ap_2020-21'>link</a>"
+#     - text: " In the AICTE web portal, click on this [clickable link](<a href='https://aicteindia.org/bureaus/approval/ap_2020-21'>link</a>) , for more details refer:  [<a href='https://aicteindia.org/bureaus/approval/ap_2020-21'>link</a>](<a href='https://aicteindia.org/bureaus/approval/ap_2020-21'>link</a>) "
+
+  utter_approval_process:
+
+     - text: "<b>Login</b> to AICTE web portal, or click <a href='https://aicteindia.org/bureaus/approval/ap_2020-21'>https://aicteindia.org/bureaus/approval/ap_2020-21</a>) \n
+            <b>  NOTE:</b> For more details refer: <a href='https://aicteindia.org/bureaus/approval/ap_2020-21'>https://aicteindia.org/bureaus/approval/ap_2020-21</a>"
+       image: "https://i.postimg.cc/nVdDfWfb/Whats-App-Image-2022-03-05-at-1-41-09-PM.jpg"
+
+     - text: " Use the link <a href='https://aicteindia.org/bureaus/approval/ap_2020-21'>https://aicteindia.org/bureaus/approval/ap_2020-21</a>) ,for more details refer: <a href='https://aicteindia.org/bureaus/approval/ap_2020-21'>https://aicteindia.org/bureaus/approval/ap_2020-21</a> "
+       image: "https://i.postimg.cc/nVdDfWfb/Whats-App-Image-2022-03-05-at-1-41-09-PM.jpg"
+
+
+
+
+  utter_change_details:
+     - text: "Once application form submitted (and payment not done), you can click on the <b>'re-open application' button </b>under 'Attachments and Submit' tab, NOTE: Make sure you re-submit the form without fail.\n
+              For more details contact Approval Bureau or regional Office"
+     - text: " For re-submitting the application form/ editing the form, click on <b>'re-open application'</b> under 'Attachments and Submit' tab.\n
+            <b>   NOTE</b>: This is applicable only if payment is not done"
+#  utter_chitchat/ask_change_details:
+
+#     - text: "If application form submitted (and payment not done), click on the <b>'re-open application' button </b>in the 'Attachments and Submit' tab,\n
+#            <b>  NOTE:</b> Make sure you re-submit the form without fail.\n
+#              For more details contact Approval Bureau or regional Office"
+#     - text: "For re-submitting or editing the form, click on 're-open application' under 'Attachments and Submit' tab.\n
+#           <b>   NOTE</b>: This is applicable only if payment is not done"
+#  utter_chitchat/ask_faculty:
+#     - text: " For faculty details, Under 'HOI & Faculty' tab, records can be deleted by marking them duplicate or 'Left the Institute'. <b>NOTE:</b> Aadhar and Pan details are mandatory for the above updation.\n
+#               For more details on updating by import method, refer [<a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>link</a>](<a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>link</a>) "
+#     - text: " For faculty updation or deletion, check out 'HOI & Faculty' tab. <b>NOTE:</b> Aadhar and Pan details are mandatory for the above. \n
+#               For more details on updating by import method, refer [<a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>link</a>](<a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>link</a>) "
+  utter_faculty:
+
+     - text: " For faculty details, Under 'HOI & Faculty' tab, delete by marking them duplicate or 'Left the Institute'\n
+            <b>   NOTE: </b>Aadhar and Pan details are mandatory for the above.\n
+               For more details on updating by import method, refer (<a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>link</a>) "
+       image: "https://i.postimg.cc/hPWfnRZY/Whats-App-Image-2022-03-05-at-2-01-26-PM.jpg"
+
+     - text: " For faculty updation or deletion, check out 'HOI & Faculty' tab.\n
+            <b>   NOTE</b>: Aadhar and Pan details are mandatory for the above. \n
+               For more details on updating by import method, refer (<a href='https://aicte-india.org/bureaus/approval/ap_2020-21'>link</a>) "
+       image:  "https://i.postimg.cc/hPWfnRZY/Whats-App-Image-2022-03-05-at-2-01-26-PM.jpg"
+
+  utter_payment_failure:
+    - text: " 1. For <b>payment updation,</b>check under payment tab -> view transaction \n
+              2. If not updated in <b>2-3 working days,</b> raise a grievance at <a href='https://www.facilities.aicteindia.org/ApprovalProcess/apformEmail.php'>https://www.facilities.aicteindia.org/ApprovalProcess/apformEmail.php</a>) \n
+              3. Check if the application form is successfully submitted"
+
+  utter_payment_queries:
+    - text: "For queries related to payment, raise a grievance at <a href='https://www.facilities.aicteindia.org/ApprovalProcess/apformEmail.php'>https://www.facilities.aicteindia.org/ApprovalProcess/apformEmail.php</a>) "
+      image: "https://i.postimg.cc/CLsr93FC/passwors.jpg"
+  utter_approval_process_info:
+    - text: "For information regarding the <b>approval process </b>kindly visit 'AICTE Home page' -> 'Quick Links' -> More Info"
+      image: "https://i.postimg.cc/wMDc0c3T/Whats-App-Image-2022-03-05-at-1-33-26-PM.jpg"
+  utter_approval_process_queries:
+    - text: "For more queries on <b>'APPROVAL PROCESS'</b>, contact: helpdesk1@aicte-india.org"
+#      image: "C:\Users\91936\Desktop\passwors.jpg"
+      ##image: "C:/Users/91936/PycharmProjects/rasachatbot/static/img"
+  utter_details_mandatory:
+    - text: "Application only to be filled as New Institutions. \n
+            <b> NOTE</b>: Aadhar and PAN details are mandatory for application."
+  utter_details_change:
+    - text: "The details that are non-editable or read-only cannot be changed beyond the specified schedule. \n
+             For more info contact the<b> Approval Bureau.</b> \n
+         <b>    NOTE</b>: Make sure the application is re-submitted after changes if any"
+
+  utter_need:
+    - text: "<b>All India Council for Technical Education (AICTE) </b>was set up in <b>November 1945</b> as a national-level Apex Advisory Body to conduct a survey on the facilities available for technical education and to promote development in the country in a coordinated and integrated manner. "
+  utter_member:
+    - text: "All individuals desirous of being considered for empanelment under various categories are requested to apply online by submitting relevant data, uploading the CV and Photograph at <b>Bureau>Technical Program>Experts</b> on the AICTE web Portal www.aicte-india.org "
+  utter_location:
+    - text: "Refer the link to know about the locations throughout India [click here] <a href='https://www.aicte-india.org/contact/'>https://www.aicte-india.org/contact/</a>) \n
+               next"
+      image: "https://i.postimg.cc/RVMST7PP/Whats-App-Image-2022-03-05-at-2-58-26-PM.jpg"
+  utter_engg:
+    - text: "All the <b>Engineering, MBA</b> and <b>Pharmacy colleges</b> are affiliated with the All India Council for Technical Education. While technical institutions are overlooked by the AICTE, the other universities and colleges fall under the UGC.\n
+             It offers \n
+          <b>   1. PARAKH </b>- Student learning assessment \n
+          <b>   2. NEAT </b>- National Educational Alliance for Technology \n
+           <b>  3. Indian Innovation initiative </b>and so on to improve the standard of education in India"
+      image: "https://i.postimg.cc/9FkpBMLk/Whats-App-Image-2022-03-05-at-2-49-19-PM.jpg"
+  utter_college:
+    - text: " Check out the link to find all <b>AICTE approved colleges</b> <a href='https://targetstudy.com/colleges/aicte-approved-colleges-in-india.html>https://targetstudy.com/colleges/aicte-approved-colleges-in-india.html</a>"
+      image: "https://i.postimg.cc/1zh8mhzX/Whats-App-Image-2022-03-05-at-2-05-07-PM.jpg"
+  utter_sih:
+    - text: "<b>Smart India Hackathon </b>is a nationwide initiative to provide students a platform to solve some of pressing problems we face in our daily lives, and thus inculcate a culture of product innovation and a mindset of problem solving.\n
+              For more details please visit <a href='https://sih.gov.in/'>https://sih.gov.in/</a>"
+      image: "https://i.postimg.cc/L4V9BdNd/Whats-App-Image-2022-03-05-at-10-29-34-AM.jpg"
+  utter_courses:
+    - text: "AICTE provides various <b> free courses</b> and <b>internship opportunities </b> on famous learning platforms.\n
+             Find them under quick links(AICTE AI-language transalational tool) or try using <a href='https://free.aicte-india.org/'>link</a>"
+      image: "https://i.postimg.cc/gks8XBf4/Whats-App-Image-2022-03-05-at-10-36-20-AM.jpg"
+
+  utter_contest:
+    - text: "AICTE launches <b>START UP INDIA</b> to guide and promote student driven innovations & start-ups \n
+             Visit the website: <a href='www.startup.aicte-india.org'>www.startup.aicte-india.org</a>"
+      image: "https://i.postimg.cc/GhxVBdLN/Whats-App-Image-2022-03-05-at-10-41-19-AM.jpg"
+  utter_swayam:
+    - text: " Anytime Anywhere <b> Online Learning </b> is offered by <b>Swayam - </b>can be accessed from initiative tab in the AICTE website"
+      image: "https://i.postimg.cc/mkSpJyhj/Whats-App-Image-2022-03-05-at-10-34-20-AM.jpg"
+
+  utter_contd:
+    - text: "Would you like to explore more? (yes/no)"
+
+
+actions:
+  - action_video
+  - utter_details_mandatory
+  - utter_submenu_details
+  - utter_details_change
+  - utter_approval_process_queries
+  - utter_approval_process_info
+  - utter_payment_failure
+  - utter_menu
+  - utter_submenu_login
+  - utter_payment_queries
+  - utter_faculty
+  - utter_change_details
+  - utter_approval_process
+  - utter_payment
+  - utter_delete_faculty
+  - utter_update_faculty
+  - utter_submenu_faculty
+  - utter_password
+  - utter_username
+  - utter_login
+  - action_hello_world
+  - utter_submenu_approval
+  - utter_mainmenu
+  - utter_mainmenu_about
+  - utter_mainmenu_links
+  - utter_mainmenu_issues
+  - utter_mainmenu_features
+  - utter_need
+  - utter_member
+  - utter_sih
+  - utter_courses
+  - utter_engg
+  - utter_location
+  - utter_contest
+  - utter_swayam
+  - utter_college
+  - utter_contd
+  - utter_service
+  - utter_feedback
+  - action_save_conversation
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
