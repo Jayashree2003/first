@@ -104,6 +104,12 @@ nlu:
   - intent: negative
     examples: |
       - rude
+      - fool
+      - mental
+      - fool
+      - mental
+      - fool
+      - mental
       - complex
       - difficult
       - boring
@@ -118,6 +124,14 @@ nlu:
 
   - intent: affirm
     examples: |
+      - yes
+      - yes
+      - yes
+      - yes
+      - yes
+      - yes
+      - yes
+      - yes
       - yes
       - y
       - indeed
@@ -138,6 +152,11 @@ nlu:
 
   - intent: deny
     examples: |
+      - no
+      - no
+      - no
+      - no
+      - no
       - no
       - no
       - no
@@ -170,6 +189,11 @@ nlu:
       - a bot?
       - a human?
       - who are you?
+      - name
+      - name
+      - name
+      - name
+      - name
       - name
 
   - intent: tell_joke
@@ -274,9 +298,19 @@ nlu:
       - forget pw
       - pass
       - password change
+      - password change
+      - password change
+      - password change
+      - password change
       - password wrong
   - intent: username
     examples: |
+      - user name
+      - username
+      - username
+      - username
+      - username
+      - userid
       - user name
       - username
       - username
@@ -293,6 +327,16 @@ nlu:
       - update faculty
       - faculty update
       - update faculty record
+      - update faculty
+      - faculty update
+      - update faculty record
+      - update faculty
+      - faculty update
+      - update faculty record
+      - update faculty
+      - faculty update
+      - update faculty record
+
   - intent: delete_faculty
     examples: |
       - delete faculty
@@ -300,6 +344,12 @@ nlu:
       - delete faculty
       - delete faculty
       - faculty delete
+      - delete faculty
+      - delete faculty
+      - delete faculty
+      - delete faculty
+      - faculty delete
+
       - delete faculty record
       - delete faculty record
       - delete faculty record
@@ -336,6 +386,12 @@ nlu:
       - approval process
       - approved
       - approval institute
+      - approval process
+      - approved
+      - approval institute
+      - approval process
+      - approved
+      - approval institute
 #  - intent: chitchat/ask_payment
 #    examples: |
 #      - online payment
@@ -354,6 +410,12 @@ nlu:
 #      - payment
   - intent: payment
     examples: |
+      - online payment
+      - payment
+      - Payment
+      - Amount
+      - amount
+      - money
       - online payment
       - payment
       - Payment
@@ -409,6 +471,12 @@ nlu:
   - intent: change_details
     examples: |
       - application
+      - application
+      - application
+      - application
+      - application
+      - application
+      - application
       - change
       - reopen
       - Application
@@ -423,6 +491,27 @@ nlu:
 
   - intent: need
     examples: |
+      - aicte
+      - aicte
+      - aicte
+      - aicte
+      - aicte
+      - aicte
+      - AICTE
+      - AICTE
+      - AICTE
+      - AICTE
+      - AICTE
+      - AICTE
+      - A.I.C.T.E
+      - A.I.C.T.E
+      - A.I.C.T.E
+      - A.I.C.T.E
+      - A.I.C.T.E
+      - A.I.C.T.E
+      - A.I.C.T.E
+      - a.i.c.t.e
+      - a.i.c.t.e
       - need
       - aicte why
       - useful
@@ -435,6 +524,13 @@ nlu:
       - want
       - be member
       - members
+      - members
+      - members
+      - members
+      - members
+      - members
+      - members
+      - members
       - want
       - be member
       - members
@@ -443,6 +539,10 @@ nlu:
     examples: |
       - under aicte
       - consists
+      - affiliated
+      - under aicte
+      - consists
+      - affiliated
       - affiliated
       - under aicte
       - consists
@@ -476,6 +576,10 @@ nlu:
         - City
         - head office
         - branch office
+        - located where
+        - City
+        - head office
+        - branch office
         - location
         - place
         - located where
@@ -498,6 +602,12 @@ nlu:
       - hackathon register
       - hackathon
       - sih
+      - hackathon participate
+      - hackathon win
+      - hackathon register
+      - hackathon participate
+      - hackathon win
+      - hackathon register
 
   - intent: courses
     examples: |
@@ -721,6 +831,44 @@ nlu:
       - changedetails
       - changedetails
       - changedetails
+
+  - intent: good_service
+    examples: |
+      - service good
+      - satisfied very much
+      - very good
+      - service good
+      - satisfied very much
+      - very good
+      - service good
+      - satisfied very much
+      - very good
+      - service good
+      - satisfied very much
+      - very good
+
+  - intent: ok_service
+    examples: |
+      - service ok
+      - satisfactory
+      - satisfied
+      - service ok
+      - satisfactory
+      - satisfied
+      - service ok
+      - satisfactory
+      - satisfied
+
+  - intent: bad_service
+    examples: |
+        - not ok
+        - not good
+        - not ok
+        - not good
+
+
+
+
 #  - intent: submenu_common
 #      - common
 #      - basic
