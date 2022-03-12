@@ -1,0 +1,216 @@
+version: "2.0"
+
+stories:
+
+   #custom action
+
+#  - story: login path
+#    steps:
+#      - intent: login
+#      - action: utter_login
+#
+#  - story: faculty path
+#    steps:
+#      - intent: faculty
+#      - action: utter_faculty
+#
+#  - story: password path
+#    steps:
+#      - intent: password
+#      - action: utter_password
+#  - story: username path
+#    steps:
+#      - intent: username
+#      - action: utter_username
+#
+#  - story: update faculty path
+#    steps:
+#      - intent: update_faculty
+#      - action: utter_update_faculty
+#
+#  - story: delete faculty path
+#    steps:
+#      - intent: delete_faculty
+#      - action: utter_delete_faculty
+
+  - story: sub menu login affirm path
+    steps:
+      - intent: greet # if greet is recognised
+      - action: utter_mainmenu
+      - intent: submenu_login #login button is clicked
+      - action: utter_submenu_login
+
+#      - intent: affirm
+#      - action: utter_mainmenu
+#      - intent: submenu_faculty #faculty button is clicked
+#      - action: utter_submenu_faculty
+  - story: sub menu login deny path
+    steps:
+      - intent: greet # if greet is recognised
+      - action: utter_mainmenu
+      - intent: submenu_login #login button is clicked
+      - action: utter_submenu_login
+
+#      - intent: deny
+#      - action: utter_goodbye
+
+  - story: sub menu faculty affirm path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: submenu_faculty
+      - action: utter_submenu_faculty
+
+#      - intent: affirm
+#      - action: utter_mainmenu
+  - story: sub menu faculty deny path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: submenu_faculty
+      - action: utter_submenu_faculty
+
+#      - intent: deny
+#      - action: utter_goodbye
+
+
+  - story: sub menu payment affirm path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: submenu_payment
+      - action: utter_submenu_payment
+
+#      - intent: affirm
+#      - action: utter_mainmenu
+
+  - story: sub menu payment deny path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: submenu_payment
+      - action: utter_submenu_payment
+
+#      - intent: deny
+#      - action: utter_goodbye
+
+  - story: sub menu approval affirm path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: submenu_approval
+      - action: utter_submenu_approval
+
+#      - intent: affirm
+#      - action: utter_menu
+
+  - story: sub menu approval deny path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: submenu_approval
+      - action: utter_submenu_approval
+#      - intent: deny
+#      - action: utter_goodbye
+
+  - story: sub menu details affirm path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: submenu_details
+      - action: utter_submenu_details
+
+#      - intent: affirm
+#      - action: utter_mainmenu
+  - story: sub menu details deny path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: submenu_details
+      - action: utter_submenu_details
+
+#      - intent: deny
+#      - action: utter_goodbye
+
+  - story: mainmenu abt path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: mainmenu_about
+      - action: utter_mainmenu_about
+
+#      - intent: affirm
+#      - action: utter_mainmenu
+
+  - story: mainmenu abt deny path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: mainmenu_about
+      - action: utter_mainmenu_about
+
+#      - intent: deny
+#      - action: utter_goodbye
+
+  - story: mainmenu features path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: mainmenu_features
+      - action: utter_mainmenu_features
+
+#      - intent: affirm
+#      - action: utter_mainmenu
+
+  - story: mainmenu features deny path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: mainmenu_features
+      - action: utter_mainmenu_features
+
+#      - intent: deny
+#      - action: utter_goodbye
+
+  - story: mainmenu issues path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: menu
+      - action: utter_menu
+#      - intent: affirm
+#      - action: utter_mainmenu
+
+  - story: mainmenu issues  deny path
+    steps:
+      - intent: greet
+      - action: utter_mainmenu
+      - intent: menu
+      - action: utter_menu
+
+#      - intent: deny
+#      - action: utter_goodbye
+
+#  - story: mainmenu links affirm path
+#    steps:
+#      - intent: greet
+#      - action: utter_mainmenu
+#      - intent: mainmenu_links
+#      - action: utter_mainmenu_links
+
+#      - intent: affirm
+#      - action: utter_mainmenu
+
+#  - story: mainmenu links deny path
+#    steps:
+#      - intent: greet
+#      - action: utter_mainmenu
+#      - intent: mainmenu_links
+#      - action: utter_mainmenu_links
+
+#      - intent: deny
+#      - action: utter_goodbye
+
+
+
+
